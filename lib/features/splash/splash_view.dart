@@ -30,7 +30,8 @@ class SplashView extends StatelessWidget {
             const Spacer(),
             ButtonApp(
               onTap: () {
-                Navigator.of(context).push(
+                Navigator.pushReplacement(
+                  context,
                   PageTransition(
                     type: PageTransitionType.size,
                     alignment: Alignment.center,

@@ -6,7 +6,7 @@ import '../core/utils/app_assets.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_strings.dart';
 
-class TextFiledApp extends StatefulWidget {
+class TextFiledApp extends StatelessWidget {
   TextFiledApp(
       {Key? key,
       required this.controller,
@@ -14,7 +14,9 @@ class TextFiledApp extends StatefulWidget {
       this.suffixIcon,
       required this.hintText,
       this.obscureText = false,
-      this.applyObscureText = false})
+      this.applyObscureText = false,
+      this.readOnly = false,
+      this.onTap})
       : super(key: key);
   final TextEditingController controller;
   final String prefixIcon;
@@ -22,39 +24,39 @@ class TextFiledApp extends StatefulWidget {
   final String hintText;
   final bool applyObscureText;
   bool obscureText;
-
-  @override
-  State<TextFiledApp> createState() => _TextFiledAppState();
-}
-
-class _TextFiledAppState extends State<TextFiledApp> {
+  final bool readOnly;
+  final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      obscureText: widget.obscureText,
+      onTap: readOnly ? onTap : null,
+      readOnly: readOnly,
+      obscureText: obscureText,
       decoration: InputDecoration(
-        hintText: widget.hintText,
+        hintText: hintText,
         hintStyle: TextStyle(fontSize: 12.sp, color: AppColors.greyM),
-        suffixIcon: widget.applyObscureText
-            ? InkWell(
-                onTap: () {
-                  setState(() {
-                    widget.obscureText = !widget.obscureText;
-                  });
-                },
-                child: Padding(
-                  padding: EdgeInsets.all(12.sp),
-                  child: SvgPicture.asset(
-                    widget.obscureText ? AppAssets.show : AppAssets.hide,
-                    color: AppColors.greyD,
+        suffixIcon: applyObscureText
+            ? StatefulBuilder(builder: (context, setState) {
+                return InkWell(
+                  onTap: () {
+                    setState(() {
+                      obscureText = !obscureText;
+                    });
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.all(12.sp),
+                    child: SvgPicture.asset(
+                      obscureText ? AppAssets.show : AppAssets.hide,
+                      color: AppColors.greyD,
+                    ),
                   ),
-                ),
-              )
+                );
+              })
             : null,
         prefixIcon: Padding(
           padding: EdgeInsets.all(12.sp),
           child: SvgPicture.asset(
-            widget.prefixIcon,
+            prefixIcon,
             color: AppColors.greyD,
           ),
         ),

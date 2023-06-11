@@ -54,7 +54,8 @@ class OnBoardingView extends StatelessWidget {
       body: IntroScreenOnboarding(
         introductionList: introductionList,
         onTapSkipButton: () {
-          Navigator.of(context).pushReplacement(
+          Navigator.pushReplacement(
+            context,
             PageTransition(
               type: PageTransitionType.bottomToTopJoined,
               alignment: Alignment.center,

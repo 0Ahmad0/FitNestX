@@ -12,4 +12,13 @@ class AppAssets {
   static String lock = '$path/lock.svg';
   static String email = '$path/email.svg';
   static String person = '$path/person.svg';
+  static String successLogin = '$path/success_login.svg';
+  static String completeProfile = '$path/complete_profile.svg';
+  static String goal1 = '$path/goal1.svg';
+  static String goal2 = '$path/goal2.svg';
+  static String goal3 = '$path/goal3.svg';
+  static String gender = '$path/gender.svg';
+  static String calender = '$path/calendar.svg';
+  static String weight = '$path/weight.svg';
+  static String height = '$path/height.svg';
 }

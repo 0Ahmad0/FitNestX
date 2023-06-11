@@ -15,6 +15,7 @@ class FitNestXApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
               fontFamily: GoogleFonts.poppins().fontFamily,
               visualDensity: VisualDensity.adaptivePlatformDensity,
