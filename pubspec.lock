@@ -147,14 +147,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  intro_screen_onboarding_flutter:
-    dependency: "direct main"
-    description:
-      name: intro_screen_onboarding_flutter
-      sha256: "5ef142f00a426fc6bc3a953557cd35661ab64dae757546d5980fd4fd4bce017e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   js:
     dependency: transitive
     description:
@@ -195,6 +187,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
+  page_transition:
+    dependency: "direct main"
+    description:
+      name: page_transition
+      sha256: a7694bc120b7064a7f57c336914bb8885acf4f70bb3772c30c2fcfe6a85e43ff
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.9"
   path:
     dependency: transitive
     description:

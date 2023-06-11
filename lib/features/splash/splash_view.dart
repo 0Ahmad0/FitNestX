@@ -2,10 +2,12 @@ import 'package:fitnest_x/core/utils/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../core/utils/app_colors.dart';
 import '../../core/utils/app_strings.dart';
-import '../../widgets/gradient_text.dart';
+import '../../widgets/button_app.dart';
+import '../onboarding/onboarding_view.dart';
 
 const splashDecoration = BoxDecoration(
   gradient: LinearGradient(colors: AppColors.brand),
@@ -26,24 +28,19 @@ class SplashView extends StatelessWidget {
             const Spacer(),
             SvgPicture.asset(AppAssets.logo),
             const Spacer(),
-            InkWell(
-              onTap: () {},
-              child: Container(
-                alignment: Alignment.center,
-                height: 60.h,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(99.r),
-                  color: AppColors.white,
-                ),
-                child: GradientText(
-                  gradient: LinearGradient(
-                    colors: AppColors.brand,
+            ButtonApp(
+              onTap: () {
+                Navigator.of(context).push(
+                  PageTransition(
+                    type: PageTransitionType.size,
+                    alignment: Alignment.center,
+                    child: OnBoardingView(),
+                    isIos: true,
                   ),
-                  text: AppStrings.getStarted,
-                  style:
-                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
-                ),
-              ),
+                );
+              },
+              isGetStarted: true,
+              text: AppStrings.getStarted,
             )
           ],
         ),

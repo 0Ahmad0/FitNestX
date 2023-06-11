@@ -17,6 +17,7 @@ class FitNestXApp extends StatelessWidget {
           return MaterialApp(
             theme: ThemeData(
               fontFamily: GoogleFonts.poppins().fontFamily,
+              visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
             home: SplashView(),
           );

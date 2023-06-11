@@ -17,7 +17,7 @@ dependencies:
   flutter_svg: ^2.0.5
   google_fonts: ^4.0.4
   flutter_screenutil: ^5.7.0
-  intro_screen_onboarding_flutter: ^1.0.0
+  page_transition: ^2.0.9
 
 
 
