@@ -38,4 +38,11 @@ class AppStrings {
   static const bmi = 'BMI (Body Mass Index)';
   static const haveNormalWeight = 'You have a normal weight';
   static const viewMore = 'View More';
+  static const check = 'Check';
+  static const todayTarget = 'Today Target';
+  static const activityStatus = 'Activity Status';
+  static const sleep = 'Sleep';
+  static const calories = 'Calories';
+  static const waterIntake = 'Water Intake';
+  static const realTimeUpdate = 'Real time updates';
 }

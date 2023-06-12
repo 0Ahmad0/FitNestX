@@ -21,6 +21,8 @@ dependencies:
   intl: ^0.18.1
   carousel_slider: ^4.2.1
   persistent_bottom_nav_bar: ^5.0.2
+  fl_chart: ^0.62.0
+  percent_indicator: ^4.2.3
 
 
 
