@@ -35,4 +35,7 @@ class AppStrings {
   static const helpUsChooseBestProgram =
       'It will help us to choose a best program for you';
   static const confirm = 'Confirm';
+  static const bmi = 'BMI (Body Mass Index)';
+  static const haveNormalWeight = 'You have a normal weight';
+  static const viewMore = 'View More';
 }

@@ -15,4 +15,5 @@ class AppColors {
   static const greyM = Color(0xffADA4A5);
   static const greyL = Color(0xffDDDADA);
   static const border = Color(0xffF7F8F8);
+  static const shadowNavBar = Color(0xff1D1617);
 }

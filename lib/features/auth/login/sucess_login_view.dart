@@ -5,6 +5,9 @@ import 'package:fitnest_x/widgets/button_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:page_transition/page_transition.dart';
+
+import '../../../widgets/bottom_navbar/bottom_navbar_app.dart';
 
 final successLoginWelcomeStyle =
     TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold);
@@ -33,7 +36,18 @@ class SuccessLoginView extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const Spacer(),
-              ButtonApp(text: AppStrings.goToHome, onTap: () {})
+              ButtonApp(
+                  text: AppStrings.goToHome,
+                  onTap: () {
+                    print('hello');
+                    Navigator.pushReplacement(
+                      context,
+                      PageTransition(
+                        child: BottomNavbar(),
+                        type: PageTransitionType.bottomToTop,
+                      ),
+                    );
+                  })
             ],
           ),
         ),

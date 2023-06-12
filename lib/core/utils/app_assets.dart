@@ -30,4 +30,6 @@ class AppAssets {
   static String activityF = '$path/activity_f.svg';
   static String cameraN = '$path/camera_n.svg';
   static String cameraF = '$path/camera_f.svg';
+  static String notification = '$path/notification.svg';
+  static String homeBannerBackground = '$path/home_banner_ackground.svg';
 }
