@@ -1,10 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fitnest_x/core/utils/app_assets.dart';
 import 'package:fitnest_x/core/utils/app_colors.dart';
+import 'package:fitnest_x/features/navbar/navbar_view.dart';
 import 'package:fitnest_x/widgets/button_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:page_transition/page_transition.dart';
 
 import '../../../core/utils/app_strings.dart';
 
@@ -49,6 +51,7 @@ class YourGoalView extends StatelessWidget {
               items: goalItems
                   .map((e) => Builder(builder: (BuildContext context) {
                         return Container(
+                          width: double.infinity,
                           padding: EdgeInsets.symmetric(vertical: 30.sp),
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
@@ -57,7 +60,6 @@ class YourGoalView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(22.r),
                           ),
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
                               SvgPicture.asset(e.image),
                               const Spacer(),
@@ -70,8 +72,9 @@ class YourGoalView extends StatelessWidget {
                                 textAlign: TextAlign.center,
                               ),
                               Container(
-                                width: 10.w,
-                                height: 4.h,
+                                margin: EdgeInsets.symmetric(vertical: 8.sp),
+                                width: 100.w,
+                                height: 2.h,
                                 decoration:
                                     BoxDecoration(color: AppColors.white),
                               ),
@@ -95,7 +98,17 @@ class YourGoalView extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               horizontal: 30.w,
             ),
-            child: ButtonApp(text: AppStrings.confirm, onTap: () {}),
+            child: ButtonApp(
+                text: AppStrings.confirm,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    PageTransition(
+                      child: NavBarView(),
+                      type: PageTransitionType.topToBottom,
+                    ),
+                  );
+                }),
           ),
           SizedBox(
             height: 40.sp,

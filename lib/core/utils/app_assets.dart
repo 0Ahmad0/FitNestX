@@ -21,4 +21,13 @@ class AppAssets {
   static String calender = '$path/calendar.svg';
   static String weight = '$path/weight.svg';
   static String height = '$path/height.svg';
+  static String search = '$path/search.svg';
+  static String homeN = '$path/home_n.svg';
+  static String homeF = '$path/home_f.svg';
+  static String profileN = '$path/profile_n.svg';
+  static String profileF = '$path/profile_f.svg';
+  static String activityN = '$path/activity_n.svg';
+  static String activityF = '$path/activity_f.svg';
+  static String cameraN = '$path/camera_n.svg';
+  static String cameraF = '$path/camera_f.svg';
 }

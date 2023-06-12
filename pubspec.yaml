@@ -20,6 +20,7 @@ dependencies:
   page_transition: ^2.0.9
   intl: ^0.18.1
   carousel_slider: ^4.2.1
+  persistent_bottom_nav_bar: ^5.0.2
 
 
 
