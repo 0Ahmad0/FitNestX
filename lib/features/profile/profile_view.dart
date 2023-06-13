@@ -8,6 +8,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../core/utils/app_strings.dart';
 import '../../widgets/appbar/appbar_app.dart';
+import '../../widgets/switch/switch_app.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({Key? key}) : super(key: key);
@@ -158,9 +159,185 @@ class ProfileView extends StatelessWidget {
                     ),
                   )),
                 ],
-              )
+              ),
+              SizedBox(
+                height: 20.sp,
+              ),
+              Container(
+                padding: EdgeInsets.all(20.sp),
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(16.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.black.withOpacity(.1),
+                      blurRadius: 4.sp,
+                      offset: Offset(0, 4.sp),
+                    )
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppStrings.account,
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.bold),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.profileIcon),
+                      title: Text(
+                        AppStrings.profile,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.achievement),
+                      title: Text(
+                        AppStrings.achievement,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.activity),
+                      title: Text(
+                        AppStrings.activityHistory,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.workout),
+                      title: Text(
+                        AppStrings.workoutProgress,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20.sp,
+              ),
+              Container(
+                padding: EdgeInsets.all(20.sp),
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(16.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.black.withOpacity(.1),
+                      blurRadius: 4.sp,
+                      offset: Offset(0, 4.sp),
+                    )
+                  ],
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      AppStrings.notification,
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.bold),
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ListTile(
+                            contentPadding: EdgeInsets.zero,
+                            onTap: () {},
+                            leading:
+                                SvgPicture.asset(AppAssets.notificationProfile),
+                            title: Text(
+                              AppStrings.popUpNotification,
+                              style: TextStyle(
+                                  color: AppColors.greyD, fontSize: 12.sp),
+                            ),
+                          ),
+                        ),
+                        AnimatedSwitch()
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20.sp,
+              ),
+              Container(
+                padding: EdgeInsets.all(20.sp),
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(16.r),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.black.withOpacity(.1),
+                      blurRadius: 4.sp,
+                      offset: Offset(0, 4.sp),
+                    )
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      AppStrings.other,
+                      style: TextStyle(
+                          fontSize: 16.sp, fontWeight: FontWeight.bold),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.message),
+                      title: Text(
+                        AppStrings.contactUs,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.shieldDone),
+                      title: Text(
+                        AppStrings.privacyPolicy,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                    ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      onTap: () {},
+                      trailing: Icon(Icons.arrow_forward_ios),
+                      leading: SvgPicture.asset(AppAssets.setting),
+                      title: Text(
+                        AppStrings.settings,
+                        style:
+                            TextStyle(color: AppColors.greyD, fontSize: 12.sp),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
-          ))
+          )),
         ],
       ),
     );

@@ -53,4 +53,13 @@ class AppStrings {
   static const showMore = 'Show More';
   static const profile = 'Profile';
   static const edit = 'Edit';
+  static const personalData = 'Personal Data';
+  static const achievement = 'Achievement';
+  static const activityHistory = 'Activity History';
+  static const workoutProgress = 'Workout Progress';
+  static const popUpNotification = 'Pop-up Notification';
+  static const settings = 'Settings';
+  static const account = 'Account';
+  static const other = 'Other';
+  static const contactUs = 'Contact Us';
 }

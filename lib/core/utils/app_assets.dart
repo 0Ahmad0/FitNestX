@@ -2,6 +2,7 @@ class AppAssets {
   static String path = 'assets/images';
   static String pathNotification = 'assets/images/notification';
   static String pathActivity = 'assets/images/activity';
+  static String pathProfile = 'assets/images/profile';
 
   ///
   static String logo = '$path/logo.svg';
@@ -50,4 +51,14 @@ class AppAssets {
   static String activityGlass = '$pathActivity/activity_glass.svg';
   static String activityPerson1 = '$pathActivity/activity_person1.svg';
   static String activityPerson2 = '$pathActivity/activity_person2.svg';
+
+  ///
+  static String achievement = '$pathProfile/achievement.svg';
+  static String activity = '$pathProfile/activity.svg';
+  static String message = '$pathProfile/message.svg';
+  static String notificationProfile = '$pathProfile/notification.svg';
+  static String profileIcon = '$pathProfile/profile.svg';
+  static String setting = '$pathProfile/setting.svg';
+  static String shieldDone = '$pathProfile/shieldDone.svg';
+  static String workout = '$pathProfile/workout.svg';
 }
