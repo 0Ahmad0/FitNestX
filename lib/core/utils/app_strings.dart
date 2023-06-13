@@ -45,4 +45,7 @@ class AppStrings {
   static const calories = 'Calories';
   static const waterIntake = 'Water Intake';
   static const realTimeUpdate = 'Real time updates';
+  static const notification = 'Notifications';
+  static const activityTracker = 'Activity Tracker';
+  static const footSteps = 'Foot Steps';
 }

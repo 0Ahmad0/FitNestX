@@ -1,11 +1,13 @@
 import 'package:fitnest_x/core/utils/app_assets.dart';
 import 'package:fitnest_x/core/utils/app_colors.dart';
 import 'package:fitnest_x/core/utils/app_strings.dart';
+import 'package:fitnest_x/features/notification/notification_view.dart';
 import 'package:fitnest_x/widgets/gradient_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -36,15 +38,25 @@ class HomeView extends StatelessWidget {
             'Ahmad Alhariri',
             style: nameStyle,
           ),
-          trailing: Container(
-            width: 50.sp,
-            height: 50.sp,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.r),
-                color: AppColors.border),
-            child: Padding(
-              padding: EdgeInsets.all(12.sp),
-              child: SvgPicture.asset(AppAssets.notification),
+          trailing: InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      child: NotificationView(),
+                      alignment: Alignment.topRight,
+                      type: PageTransitionType.scale));
+            },
+            child: Container(
+              width: 50.sp,
+              height: 50.sp,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8.r),
+                  color: AppColors.border),
+              child: Padding(
+                padding: EdgeInsets.all(12.sp),
+                child: SvgPicture.asset(AppAssets.notification),
+              ),
             ),
           ),
         ),

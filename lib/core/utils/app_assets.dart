@@ -1,5 +1,9 @@
 class AppAssets {
   static String path = 'assets/images';
+  static String pathNotification = 'assets/images/notification';
+  static String pathActivity = 'assets/images/activity';
+
+  ///
   static String logo = '$path/logo.svg';
   static String onBoarding1 = '$path/onboarding1.svg';
   static String onBoarding2 = '$path/onboarding2.svg';
@@ -33,4 +37,17 @@ class AppAssets {
   static String notification = '$path/notification.svg';
   static String homeBannerBackground = '$path/home_banner_ackground.svg';
   static String homeBannerDots = '$path/home_banner_dots.png';
+
+  ///
+  static String n1 = '$pathNotification/n1.svg';
+  static String n2 = '$pathNotification/n2.svg';
+  static String n3 = '$pathNotification/n3.svg';
+  static String n4 = '$pathNotification/n4.svg';
+  static String n5 = '$pathNotification/n5.svg';
+
+  ///
+  static String activityBoots = '$pathActivity/activity_boots.svg';
+  static String activityGlass = '$pathActivity/activity_glass.svg';
+  static String activityPerson1 = '$pathActivity/activity_person1.svg';
+  static String activityPerson2 = '$pathActivity/activity_person2.svg';
 }

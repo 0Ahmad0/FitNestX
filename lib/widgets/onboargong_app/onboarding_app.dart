@@ -176,7 +176,9 @@ class _IntroScreenOnboardingState extends State<IntroScreenOnboarding> {
                   : widget.onTapSkipButton!();
             },
             icon: Icon(
-              Icons.arrow_forward_ios,
+              (_currentPage != widget.introductionList!.length - 1)
+                  ? Icons.arrow_forward_ios
+                  : Icons.check,
               color: Colors.white,
             ),
             iconSize: 15,
