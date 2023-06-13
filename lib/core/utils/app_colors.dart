@@ -16,4 +16,6 @@ class AppColors {
   static const greyL = Color(0xffDDDADA);
   static const border = Color(0xffF7F8F8);
   static const shadowNavBar = Color(0xff1D1617);
+  static const blueL = Color(0xffE9EEFF);
+  static const pinkL = Color(0xffF9EBF8);
 }

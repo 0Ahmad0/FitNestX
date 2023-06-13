@@ -48,4 +48,7 @@ class AppStrings {
   static const notification = 'Notifications';
   static const activityTracker = 'Activity Tracker';
   static const footSteps = 'Foot Steps';
+  static const activityProgress = 'Activity Progress';
+  static const latestActivity = 'Latest Activity';
+  static const showMore = 'Show More';
 }
