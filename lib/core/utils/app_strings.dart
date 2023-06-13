@@ -51,4 +51,6 @@ class AppStrings {
   static const activityProgress = 'Activity Progress';
   static const latestActivity = 'Latest Activity';
   static const showMore = 'Show More';
+  static const profile = 'Profile';
+  static const edit = 'Edit';
 }
